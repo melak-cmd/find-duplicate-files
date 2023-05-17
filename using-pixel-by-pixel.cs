@@ -219,9 +219,13 @@ class Program
         // Move the cursor to the beginning of the current line on the console 
          Console.CursorLeft = 0;
 
-         Write(bar.ToString());
+        // Write the bar string on the console without a new line character
+        Console.Write(bar.ToString());
 
-         If(progress == total)
-         Console.WriteLine();
+        // If the progress is equal to the total, move the cursor to a new line on the console 
+        if (progress == total)
+        {
+            Console.WriteLine();
+        }
      }
 }
